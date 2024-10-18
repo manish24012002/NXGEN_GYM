@@ -151,17 +151,32 @@ body {
 /* Basic Styling */
 /* Navigation Bar */
 .nav__bar {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #333;
   color: #fff;
-  border-radius: 2rem;
+  border-radius: 2rem; 
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Reduce padding */
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
   z-index: 1000;
+  box-sizing: border-box;
+  /* border-radius: 2rem; */
+  top: 0;
+  left: 0; /* Ensure the navbar starts from the left edge */
+  height: 7ch;
+ 
 }
 
 .nav__header {
@@ -170,7 +185,8 @@ body {
 }
 
 .nav__logo img {
-  width: 100px;
+  margin-top: 0.4rem;
+  width: 70px;
 }
 
 .nav__menu__btn {
@@ -314,6 +330,11 @@ body {
 .about__header .section__description {
   max-width: 350px;
   margin-inline: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+
 }
 
 .about__grid {
@@ -876,6 +897,7 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border-radius: 2rem;
   }
   
   .btn::before {
@@ -908,7 +930,6 @@ body {
     padding-bottom: 2px;
     transition: color 0.3s ease;
   }
-  
   a::before {
     content: "";
     position: absolute;
